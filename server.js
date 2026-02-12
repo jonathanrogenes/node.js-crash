@@ -1,11 +1,11 @@
 import http from 'http';
-const PORT = 8000;
+const PORT = process.env.PORT;
 
 const server = http.createServer((req, res) => {
   // res.setHeader('Content-Type', 'text/html');
   // res.statusCode = 404;
   res.writeHead(200, { 'Content-type': 'text/html'})
-  res.end('<h1>Hello</h1>')
+  res.end('<h1>Yo!</h1>')
 })
 
 server.listen(PORT, () => {
